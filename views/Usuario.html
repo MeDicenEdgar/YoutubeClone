@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>VideoVid</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+        </head>
+    
+        <style>
+            body {
+                background-color: #fbfbfb;
+            }
+            @media (min-width: 991.98px) {
+                main {
+                    padding-left: 240px;
+                }
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                padding: 58px 0 0; 
+                box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+                width: 240px;
+                z-index: 600;
+            }       
+            @media (max-width: 991.98px) {
+                .sidebar {
+                    width: 100%;
+                }
+            }
+            .sidebar .active {
+                border-radius: 5px;
+                box-shadow: 0 2px 5px 0 rgba(224, 3, 3, 0.16), 0 2px 10px 0 rgba(226, 13, 13, 0.12);
+                background-color: gray;
+                border-color: black;
+            }
+
+            .sidebar-sticky {
+                position: relative;
+                top: 0;
+                height: calc(100vh - 48px);
+                padding-top: 0.5rem;
+                overflow-x: hidden;
+                overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+            }
+
+            .user-container {
+                display: flex;
+                align-items: center;
+                margin-top: 50px;
+            }
+            .profile-pic {
+                width: 100px;
+                height: 100px;
+                margin-top: 50px; 
+                margin-left: 100px;
+            }
+            .user-info {
+                margin-left: 15px;
+                margin-top: 20px;
+            }    
+            .subscribers {
+                margin-left: 10px; 
+                font-size: 0.8em; 
+                color: #666; 
+            }
+            .btn-customize {
+                border-radius: 25px; 
+                background-color: #d8d8d8; 
+                color: #333; 
+                border: none;
+                font-size: 12px;
+            }
+            
+            .custom-margin {
+                margin-right: 120px; 
+            }
+            .user-menu .nav-link {
+                color: black !important; 
+            }
+
+            .shorts-container {
+                display: flex;
+                align-items: center;
+                margin-top: 50px;
+            }
+            .shorts-pic {
+                width: 20px; 
+                height: 20px; 
+                margin-left: 120px;
+            }
+
+            .shorts-title h2{
+                margin-left: 120px; 
+                font-size: 15px;
+                margin: 0;
+            }
+
+            .shorts-videos {
+                display: flex;
+                justify-content: center;
+                flex-wrap: nowrap;
+                gap: 10px; 
+                margin-top: 20px; 
+            }
+            .shorts-item {
+                flex: 0 0 calc(25% - 10px); 
+                position: relative;
+                width: 100%; 
+                max-width: 200px; 
+                margin-top: 10px;
+                margin-left: 20px; 
+            }
+            .shorts-item p {
+                position: absolute;
+                width: 100%;
+                text-align: center; 
+            }
+            .shorts-item::before {
+                display: block;
+                content: "";
+                width: 100%;
+                padding-top: 177.77%; 
+            }
+            .shorts-item video {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .shorts-item:first-child {
+                margin-left: 120px; 
+            }
+    
+            .videos-container {
+                display: flex;
+                align-items: center;
+                margin-top: 50px;
+            }
+            .videos-pic {
+                width: 20px; 
+                height: 20px; 
+                margin-left: 120px;
+            }
+            .videos-title h2{
+                margin-left: 120px; 
+                font-size: 15px;
+                margin: 0;
+            }
+            .videos-videos {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px; 
+                margin-left: 20px;
+                gap: 10px; 
+            }
+            .video-item:first-child {
+                margin-left: 120px; 
+            }
+            </style>
+    <body>
+        <!--Main Navigation-->
+        <div class="container">
+            <div class="user-container">
+                <!-- User Image -->
+                <img src="Images/usericon.png" class="rounded-circle profile-pic" alt="User">
+    
+                <!-- User Info -->
+                <div class="user-info">
+                    <h2>Nombre del canal</h2>
+                    <p>@username<span class="subscribers">1.23M subscribers</span></p></p>
+                </div>
+                <!-- Customize Button -->
+                <div class="ml-auto">
+                    <button class="btn rounded-pill btn-customize">Personalizar canal</button>
+                </div>
+            </div>
+            <!-- Navigation Menu -->
+            <nav class="user-menu mt-3">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item custom-margin">
+                        <a class="nav-link active" href="#">Página principal</a>
+                    </li>
+                    <li class="nav-item custom-margin">
+                        <a class="nav-link" href="#">Videos</a>
+                    </li>
+                    <li class="nav-item custom-margin">
+                        <a class="nav-link" href="#">Shorts</a>
+                    </li>
+                    <li class="nav-item custom-margin">
+                        <a class="nav-link" href="#">Información</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Shorts -->
+            <div class="shorts-container">
+                <!-- Shorts Title -->
+                <img src="Images/shortsicon.png" class="rounded-circle shorts-pic" alt="Shorts">
+                <div class="shorts-title">
+                    <h2>Shorts</h2>
+                </div>
+            </div>
+            <!-- Shorts Videos -->
+            <div class="shorts-videos">
+                <!-- Individual Video Item -->
+                <div class="shorts-item">
+                    <video controls>
+                        <source src="path_to_short_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Short Video Title</p>
+                </div>
+                <!-- Repeat for more videos -->
+                <div class="shorts-item">
+                    <video controls>
+                        <source src="path_to_short_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Short Video Title</p>
+                </div>
+                <div class="shorts-item">
+                    <video controls>
+                        <source src="path_to_short_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Short Video Title</p>
+                </div>
+                <div class="shorts-item">
+                    <video controls>
+                        <source src="path_to_short_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Short Video Title</p>
+                </div>
+            </div>
+            <!-- Videos -->
+            <div class="videos-container">
+                <!-- Shorts Title -->
+                <img src="Images/videosicon.png" class="videos-pic" alt="Videos">
+                <div class="videos-title">
+                    <h2>Videos</h2>
+                </div>
+            </div>
+            <!--Videos items -->
+            <div class="videos-videos">
+                <!-- Individual Video Item -->
+                <div class="video-item">
+                    <video controls>
+                        <source src="path_to_short_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Video Title</p>
+                </div>
+                <!-- Repeat for more videos -->
+                <div class="video-item">
+                    <video controls>
+                        <source src="path_to_short_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Video Title</p>
+                </div>
+                <div class="video-item">
+                    <video controls>
+                        <source src="path_to_short_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Video Title</p>
+                </div>
+            </div>
+        </div>
+<header>
+    <!-- Sidebar -->
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+      <div class="position-sticky">
+        <div class="list-group list-group-flush mx-3 mt-4">
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
+            <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Principal</span>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple active">
+            <i class="fas fa-chart-area fa-fw me-3"></i><span>Shorts</span>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
+              class="fas fa-lock fa-fw me-3"></i><span>Suscripciones</span></a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
+              class="fas fa-chart-line fa-fw me-3"></i><span>Mis me gusta</span></a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple">
+            <i class="fas fa-chart-pie fa-fw me-3"></i><span>Suscripciones</span>
+          </a>
+
+        </div>
+      </div>
+    </nav>
+    <!-- Sidebar -->
+  
+    <!-- Navbar -->
+    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+          <!-- Toggle button -->
+          <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#sidebarMenu"
+            aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+    
+          <!-- Brand -->
+          <a class="navbar-brand" href="home.html">
+            <img src="https://cdn-icons-png.flaticon.com/512/2791/2791441.png" height="25" alt="MyVid.png"
+              loading="lazy" />
+          </a>
+          <!-- Search form -->
+          <form class="d-none d-md-flex input-group w-auto my-auto">
+            <input autocomplete="off" type="search" class="form-control rounded"
+              placeholder='Buscar' style="min-width: 225px;" />
+            <span class="input-group-text border-0"><i class="fas fa-search"></i></span>
+          </form>
+    
+          <!-- Right links -->
+          <ul class="navbar-nav ms-auto d-flex flex-row2">
+              <li class="nav-item dropdown" style="margin-right: 200px;">
+                  <a class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow mr-10" href="#" id="navbarDropdownUpload" role="button" data-toggle="dropdown" aria-expanded="false" >
+                      <i class="fa fa-upload" id="icon-upload"></i>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownUpload" id="dropdown-upload" style="min-width: 300px;">
+                      <p class="title ml-4">Subir video</p>
+                      <div class="dropdown-divider"></div>
+                      <form action="/action_page.php" class="file-form mt-2 m-b2 ml-4 mr-4">
+                          <input type="text" class="form-control mt-3 ml-2" placeholder="Titulo del video" aria-label="mail-2" aria-describedby="basic-addon1" id="video-title">
+                          <input type="text" class="form-control mt-3 ml-2" placeholder="Descripción" aria-label="pass" aria-describedby="basic-addon1" id="video-description">
+                          <input type="file" class = "file-form mt-3 ml-2" classid="myFile" name="filename" accept=".mp4">
+                          <input type="submit" class="submit mt-3 ml-2 mr-4">
+                      </form>
+                  </div>
+              </li>
+            <!-- Icon -->
+            <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link" href="VideoMod.html">
+                <i class="fa fa-glasses"></i>
+              </a>
+          </li>
+            
+            <!-- Notification dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
+                role="button" data-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-bell"></i>
+                <span class="badge rounded-pill badge-notification bg-danger">1</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                
+              </ul>
+            </li>
+          
+            <!-- Avatar -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mi cuenta</a>
+              <div class="dropdown-menu" aria-labelledby="dropdownId">
+                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal-in">Mi Cuenta</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal-in">Iniciar sesión</a>
+                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal-reg">Registro</a>
+                  <a class="dropdown-item" href="#">Logout</a>
+              </div>
+          </li>
+          </ul>
+        </div>
+      <!-- Container wrapper -->
+    </nav>
+        </header>
+        <div class="modal fade" id="modal-in" tabindex="-1" role="dialog" aria-labelledby="modalRegistro" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Ingresar</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mt-3 mb-4">
+                        <input type="text" class="form-control" placeholder="Correo electronico" aria-label="mail" aria-describedby="basic-addon1">
+                        <div class="form-group-append">
+                            <span class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+                    <div class="input-group mt-3 mb-4">
+                        <input type="text" class="form-control" placeholder="Contraseña" aria-label="mail" aria-describedby="basic-addon1">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="fa fa-key" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+                    <div class="container mb-2">
+                        <div class="col-md-12 text-center">
+                            <button type="button" class="btn btn-login col-lg-10 mb-2">Login</button>
+                        </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        
+          <div class="modal fade" id="modal-reg" tabindex="-1" role="dialog" aria-labelledby="modalRegistro" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Registrar usuario</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control mt-3" placeholder="Correo" aria-label="mail-2" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control mt-3" placeholder="Contraseña" aria-label="pass" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control mt-3" placeholder="Confirmar contraseña" aria-label="pass-con" aria-describedby="basic-addon1">
+                    <div class="container">
+                        <div class="col-md-12 text-center mt-4">
+                            <button type="button" class="btn btn-login col-lg-10 mb-2">Registrarse</button>
+                        </div>
+                    </div>
+                    
+              </div>
+            </div>
+        </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    </body>
+</html>

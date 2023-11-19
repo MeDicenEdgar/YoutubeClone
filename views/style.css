@@ -1,0 +1,209 @@
+
+body {
+    background-color: #fbfbfb;
+}
+@media (min-width: 991.98px) {
+    main {
+        padding-left: 240px;
+    }
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 58px 0 0; 
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+    width: 240px;
+    z-index: 600;
+}       
+@media (max-width: 991.98px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+.sidebar .active {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgba(224, 3, 3, 0.16), 0 2px 10px 0 rgba(226, 13, 13, 0.12);
+    background-color: gray;
+    border-color: black;
+}
+
+.sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: 0.5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+.user-container {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    margin-top: 50px; 
+    margin-left: 100px;
+}
+.user-info {
+    margin-left: 15px;
+    margin-top: 20px;
+}    
+.subscribers {
+    margin-left: 10px; 
+    font-size: 0.8em; 
+    color: #666; 
+}
+.btn-customize {
+    border-radius: 25px; 
+    background-color: #d8d8d8; 
+    color: #333; 
+    border: none;
+    font-size: 12px;
+}
+
+.custom-margin {
+    margin-right: 120px; 
+}
+.user-menu .nav-link {
+    color: black !important; 
+}
+
+.shorts-container {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+.shorts-pic {
+    width: 20px; 
+    height: 20px; 
+    margin-left: 120px;
+}
+
+.shorts-title h2{
+    margin-left: 120px; 
+    font-size: 15px;
+    margin: 0;
+}
+
+.shorts-videos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 10px; 
+    margin-top: 20px; 
+}
+.shorts-item {
+    flex: 0 0 calc(25% - 10px); 
+    position: relative;
+    width: 100%; 
+    max-width: 200px; 
+    margin-top: 10px;
+    margin-left: 20px; 
+}
+.shorts-item p {
+    position: absolute;
+    width: 100%;
+    text-align: center; 
+}
+.shorts-item::before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 177.77%; 
+}
+.shorts-item video {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.shorts-item:first-child {
+    margin-left: 120px; 
+}
+
+.videos-container {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+.videos-pic {
+    width: 20px; 
+    height: 20px; 
+    margin-left: 120px;
+}
+.videos-title h2{
+    margin-left: 120px; 
+    font-size: 15px;
+    margin: 0;
+}
+.videos-videos {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; 
+    margin-left: 20px;
+    gap: 10px; 
+}
+
+.video-item:first-child {
+    margin-left: 120px; 
+}
+.main-menu{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+}
+.main-videos{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+}
+.main-container{
+    margin-top: 50px;
+    
+}
+.user-info-video{
+    margin-left: 15px;
+    margin-top: 20px;
+}
+.profile-pic-video {
+    width: 30px;
+    height: 30px;
+    margin-top: 4px; 
+    margin-right: 10px;
+}
+.video-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.btn-admin {
+    border-radius: 10px; 
+    background-color: #d8d8d8; 
+    color: #333; 
+    border: none;
+    font-size: 10px;
+}
+.like-button{
+    color: gray;
+}
+.like-counter{
+    font-size: 9px;
+}
+.btn-login{
+    background-color: skyblue;
+    color: white;
+    border-radius: 12px;
+    border: 2px solid whitesmoke;
+}
+.icon-upload{
+    margin-right: 30px;
+}
