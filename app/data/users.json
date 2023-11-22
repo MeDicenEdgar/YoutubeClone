@@ -1,0 +1,10 @@
+[
+    {
+        "ID": 1,
+        "email": "mail@yahoo.com",
+        "password" : "OdioLosPatos",
+        "avatar": "path_to_avatar3.png",
+        "admin": 0,
+        "videoIDs": [1,2,3]
+    }
+]

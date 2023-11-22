@@ -1,0 +1,13 @@
+{
+    "videos": [
+      {
+        "id": 1,
+        "title": "Video 1",
+        "description": "Descripción del Video 1",
+        "url": "path_to_video_1.mp4",
+        "likes": 120,
+        "uploadid": 1,
+        "approved": 1
+      }
+    ]
+  }
