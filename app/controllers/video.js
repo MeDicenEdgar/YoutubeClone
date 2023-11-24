@@ -1,3 +1,7 @@
+"use strict"
+
+const utils = require('./utils');
+
 class VideoException{
     constructor(errormessage){
         this.errormessage = errormessage;

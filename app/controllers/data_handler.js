@@ -15,6 +15,10 @@ function getUserById(uid) {
     return users.find(user => user._uid === uid);
 }
 
+function getVideoById(uid) {
+    return videos.find(video => video._uid === uid);
+}
+
 function createUser(user) {
     let check = false;
     user = User.createFromObject(user);
