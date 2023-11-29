@@ -7,3 +7,7 @@ function generateUID() {
 function generateVideoID(){
     return 21
 }
+module.exports = {
+    generateUID,
+    generateVideoID
+};

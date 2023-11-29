@@ -1,6 +1,6 @@
 "use strict"
 
-const utils = require('./utils');
+const { generateVideoID } = require('./utils');
 
 class VideoException{
     constructor(errormessage){
@@ -105,3 +105,5 @@ class Video {
         }
     }
 }
+
+module.exports = Video;

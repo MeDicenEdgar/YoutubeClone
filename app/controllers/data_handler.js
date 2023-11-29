@@ -1,5 +1,8 @@
 "use strict";
 
+const Video = require('./video');
+const User = require('./user');
+
 let users = []
 let videos = []
 
@@ -21,7 +24,7 @@ function getVideoById(uid) {
 
 function createUser(user) {
     let check = false;
-    user = User.createFromObject(user);
+    //user = User.createFromObject(user);
     if(user._uid!==undefined){
         check=true;
     }
@@ -36,7 +39,7 @@ function createUser(user) {
 function createVideo(video) {
     let check = false;
     console.log(video);
-    video = Video.createFromObject(video);
+    //video = Video.createFromObject(video);
     if(video._id!==undefined){
         check=true;
     }
@@ -87,3 +90,46 @@ function deleteVideo(id) {
         throw new Error("Video not found.");
     }
 }
+
+function filterVideos(videos, query) {
+    if (!query) {
+        return videos;
+    }
+
+    // Aquí puedes ajustar el filtrado basado en los atributos de tus videos
+    return videos.filter(video => 
+        video.title.toLowerCase().includes(query.toLowerCase()) || 
+        video.description.toLowerCase().includes(query.toLowerCase())
+    );
+}
+
+function filterUsers(users, query) {
+    if (!query) {
+        return users;
+    }
+
+    // Aquí puedes ajustar el filtrado basado en los atributos de tus videos
+    return users.filter(user => 
+        user.title.toLowerCase().includes(query.toLowerCase()) || 
+        user.description.toLowerCase().includes(query.toLowerCase())
+    );
+}
+
+//get
+exports.getVideos = getVideos;
+exports.getUsers = getUsers;
+//filter
+exports.filterVideos = filterVideos;
+exports.filterUsers = filterUsers;
+//get by id
+exports.getVideoById = getVideoById;
+exports.getUserById = getUserById;
+//create
+exports.createVideo = createVideo;
+exports.createUser = createUser;
+//update
+exports.updateVideo = updateVideo;
+exports.updateUser = updateUser;
+//delete
+exports.deleteVideo = deleteVideo;
+exports.deleteUser = deleteUser;

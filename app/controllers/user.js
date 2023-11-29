@@ -1,5 +1,6 @@
 "use strict";
 
+const { generateUID } = require('./utils');
 
 class UserException{
     constructor(errormessage){
@@ -159,3 +160,4 @@ class User {
     }
 }
 
+module.exports = User;
