@@ -443,16 +443,17 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
-            <input type="text" class="form-control mt-3" placeholder="Correo" aria-label="mail-2" aria-describedby="basic-addon1">
-            <input type="text" class="form-control mt-3" placeholder="Contraseña" aria-label="pass" aria-describedby="basic-addon1">
-            <input type="text" class="form-control mt-3" placeholder="Confirmar contraseña" aria-label="pass-con" aria-describedby="basic-addon1">
-            <div class="container">
-                <div class="col-md-12 text-center mt-4">
-                    <button type="button" class="btn btn-login col-lg-10 mb-2">Registrarse</button>
+        <form action="/adduser" method="post">
+            <div class="modal-body">
+                <input type="email" name="email" class="form-control mt-3" placeholder="Correo" required>
+                <input type="password" name="password" class="form-control mt-3" placeholder="Contraseña" required>
+                <div class="container">
+                    <div class="col-md-12 text-center mt-4">
+                        <button type="button" class="btn btn-login col-lg-10 mb-2">Registrarse</button>
+                    </div>
                 </div>
             </div>
-            
+        </form>
       </div>
     </div>
 </div>
