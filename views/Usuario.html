@@ -168,6 +168,21 @@
             .video-item:first-child {
                 margin-left: 120px; 
             }
+            .btn-login{
+            background-color: skyblue;
+            color: white;
+            border-radius: 12px;
+            border: 2px solid whitesmoke;
+            }
+            .icon-upload{
+                margin-right: 30px;
+            }
+            .video-image{
+                width: 300px;
+            }
+            .upload-control{
+                width: 260px;
+            }
             </style>
     <body>
         <!--Main Navigation-->
@@ -334,12 +349,10 @@
                   <div class="dropdown-menu" aria-labelledby="navbarDropdownUpload" id="dropdown-upload" style="min-width: 300px;">
                       <p class="title ml-4">Subir video</p>
                       <div class="dropdown-divider"></div>
-                      <form action="/action_page.php" class="file-form mt-2 m-b2 ml-4 mr-4">
-                          <input type="text" class="form-control mt-3 ml-2" placeholder="Titulo del video" aria-label="mail-2" aria-describedby="basic-addon1" id="video-title">
-                          <input type="text" class="form-control mt-3 ml-2" placeholder="Descripción" aria-label="pass" aria-describedby="basic-addon1" id="video-description">
-                          <input type="file" class = "file-form mt-3 ml-2" classid="myFile" name="filename" accept=".mp4">
-                          <input type="submit" class="submit mt-3 ml-2 mr-4">
-                      </form>
+                      <input type="text" class="upload-control mt-3 ml-2" placeholder="Titulo del video" aria-label="mail-2" aria-describedby="basic-addon1" id="video-title">
+                      <input type="text" class="upload-control mt-3 ml-2" placeholder="Descripción" aria-label="pass" aria-describedby="basic-addon1" id="video-description">
+                      <input type="text" class="upload-control mt-3 ml-2" placeholder="Link" aria-label="pass" aria-describedby="basic-addon1" id="video-link">
+                      <button type="button" class="btn btn-login col-lg-10 mb-2 mt-2 ml-2" id="btn-upload">Subir video</button>
                   </div>
               </li>
             <!-- Icon -->
@@ -367,9 +380,9 @@
               <div class="dropdown-menu" aria-labelledby="dropdownId">
                   <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal-in">Mi Cuenta</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal-in">Iniciar sesión</a>
-                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal-reg">Registro</a>
-                  <a class="dropdown-item" href="#">Logout</a>
+                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal-in" id="iniciar-sesion">Iniciar sesión</a>
+                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal-reg" id="registro">Registro</a>
+                  <a class="dropdown-item" href="#" id="logoutButton">Logout</a>
               </div>
           </li>
           </ul>
@@ -388,20 +401,20 @@
                 </div>
                 <div class="modal-body">
                     <div class="input-group mt-3 mb-4">
-                        <input type="text" class="form-control" placeholder="Correo electronico" aria-label="mail" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" placeholder="Correo electronico" aria-label="mail" aria-describedby="basic-addon1" id="correo">
                         <div class="form-group-append">
                             <span class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></span>
                         </div>
                     </div>
                     <div class="input-group mt-3 mb-4">
-                        <input type="text" class="form-control" placeholder="Contraseña" aria-label="mail" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" placeholder="Contraseña" aria-label="mail" aria-describedby="basic-addon1" id="password">
                         <div class="input-group-append">
                             <span class="input-group-text"><i class="fa fa-key" aria-hidden="true"></i></span>
                         </div>
                     </div>
                     <div class="container mb-2">
                         <div class="col-md-12 text-center">
-                            <button type="button" class="btn btn-login col-lg-10 mb-2">Login</button>
+                            <button type="button" class="btn btn-login col-lg-10 mb-2" id="btn-login">Login</button>
                         </div>
                     </div>
               </div>
@@ -419,18 +432,19 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                    <input type="text" class="form-control mt-3" placeholder="Correo" aria-label="mail-2" aria-describedby="basic-addon1">
-                    <input type="text" class="form-control mt-3" placeholder="Contraseña" aria-label="pass" aria-describedby="basic-addon1">
-                    <input type="text" class="form-control mt-3" placeholder="Confirmar contraseña" aria-label="pass-con" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control mt-3" placeholder="Correo" aria-label="mail-2" aria-describedby="basic-addon1" id="correo-reg">
+                    <input type="text" class="form-control mt-3" placeholder="Contraseña" aria-label="pass" aria-describedby="basic-addon1" id="password-reg">
+                    <input type="text" class="form-control mt-3" placeholder="Confirmar contraseña" aria-label="pass-con" aria-describedby="basic-addon1" id="password-confirm">
                     <div class="container">
                         <div class="col-md-12 text-center mt-4">
-                            <button type="button" class="btn btn-login col-lg-10 mb-2">Registrarse</button>
+                            <button type="button" class="btn btn-login col-lg-10 mb-2" id="btn-reg">Registrarse</button>
                         </div>
                     </div>
                     
               </div>
             </div>
         </div>
+            
     <!-- Optional JavaScript -->
     <script src="../app/controllers/utils.js"></script>
     <script src="../app/controllers/video.js"></script>

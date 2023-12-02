@@ -32,18 +32,25 @@ router.route('/:id')
         let id = req.params.id;
         let newUser = req.body;
         let existingUser = dataHandler.getUserById(id);
+
+        //Comprobar si el usuario existe
         if (!existingUser) {
             return res.status(404).send("User not found");
         }
-        const expectedAttr = ['title', 'description', 'url', 'likes', 'uploadId', 'approved']; 
+        //Asegurarse de que todos los atributos esperados estén presentes
+        const expectedAttr = ['email', 'password']; 
         const missingAttr = expectedAttr.filter(attr => !newUser.hasOwnProperty(attr));
         if (missingAttr.length) {
             return res.status(400).send(`Missing attributes: ${missingAttr.join(', ')}`);
         }
-        try{
+        try {
+            //Actualizar el usuario
             dataHandler.updateUser(id, newUser);
+            //Guardar los cambios en users.json
+            dataHandler.saveChanges();
             res.status(200).send(`User updated: ${newUser.title}`);
-        }catch(e){
+        } catch(e) {
+            // Manejar cualquier error durante la actualización
             res.status(500).send(`Error updating user: ${e.message}`);
         }
     })

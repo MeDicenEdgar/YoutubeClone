@@ -1,9 +1,12 @@
 "use strict";
 
 const mongoose = require('mongoose');
+/*const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+let privateKey = process.env.TOKEN_KEY;*/
+//let option = { useNewUrlParser: true, useUnifiedTopology: true};
 
 let MongoDB = 'mongodb://127.0.0.1:27017/YoutubeClone'
-//let option = { useNewUrlParser: true, useUnifiedTopology: true};
 
 mongoose.connect(MongoDB);
 
@@ -16,15 +19,16 @@ let userSchema = mongoose.Schema({
     password:{
         type: String,
         required: true
+    },
+    admin:{
+        type: Number,
+        required: true
     }
     /*avatar:{
         type: String,
         required: true
     },
-    admin:{
-        type: Number,
-        required: true
-    },
+    ,
     videos:{
         type: String,
         required: true
@@ -35,17 +39,25 @@ let userSchema = mongoose.Schema({
     }*/
 });
 
-let User = mongoose.model('user',userSchema);
-let newUser = {
-    email: "yochabel.martinez@iteso.mx",
-    password: "yochi123"
-    /*avatar: "image.jpg",
-    admin: 1,
-    videos: "video1.mp4",
-    likes: 10*/
-}
-let user = User(newUser);
+/*userSchema.pre('save', function(next) {
+    let user = this;
+    user.password = bcrypt.hashSync(user.password, 10);
+    next();
+})
+userSchema.methods.generateToken = function(password) {
+    let user = this;
+    let payload = {_id: user._id, role: user.role};
+    let options = { expiresIn: 60 * 60 }
+    if (bcrypt.compareSync(password, user.password)) {
+        try {
+            user.token = jwt.sign(payload, privateKey, options);
+            return user.token;
+        } catch (err) {
+            console.log(err);
+        }
+    }
+}*/
 
-user.save()
-    .then(doc => console.log(doc))
-    .catch(err => console.log(err));
+let User = mongoose.model('user',userSchema);
+
+module.exports = User;

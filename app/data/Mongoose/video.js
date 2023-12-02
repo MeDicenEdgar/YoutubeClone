@@ -47,3 +47,5 @@ let video = Video(newVideo);
 video.save()
     .then(doc => console.log(doc))
     .catch(err => console.log(err));
+
+module.exports = Video;

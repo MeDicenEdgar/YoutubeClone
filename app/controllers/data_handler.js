@@ -1,5 +1,6 @@
 "use strict";
 
+const fs = require('fs');
 const Video = require('./video');
 const User = require('./user');
 
@@ -115,6 +116,19 @@ function filterUsers(users, query) {
     );
 }
 
+function saveChanges() {
+    // Convertir el array users a una cadena JSON
+    const jsonData = JSON.stringify(users, null, 2); // El '2' es para formatear el JSON
+
+    // Guardar la cadena JSON en el archivo users.json
+    fs.writeFile('path/to/your/users.json', jsonData, (err) => {
+        if (err) {
+            throw err;
+        }
+        console.log('Users data has been updated and saved.');
+    });
+}
+
 //get
 exports.getVideos = getVideos;
 exports.getUsers = getUsers;
@@ -133,3 +147,6 @@ exports.updateUser = updateUser;
 //delete
 exports.deleteVideo = deleteVideo;
 exports.deleteUser = deleteUser;
+//saveChanges
+exports.saveChanges = saveChanges;
+

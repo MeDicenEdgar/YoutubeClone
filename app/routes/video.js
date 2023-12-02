@@ -1,23 +1,40 @@
 "use strict"
+const fs = require('fs');
 const express = require('express');
 const router = express.Router();
+const Video = require('../data/Mongoose/video');
 
 const dataHandler = require('../controllers/data_handler');
 //const { filterVideos } = dataHandler;
 
 //GET VIDEO
 router.route('/')
-    .get((req, res) => {
+    .get(async (req, res) => {
         let query = req.query.filter;
-        let videos;
 
         try {
-            if(query === undefined){
-                videos = dataHandler.getVideos();
+            let videos;
+            if (query === undefined) {
+                videos = await Video.find({});
             } else {
-                videos = filterVideos(dataHandler.getVideos(), query);
+                videos = await Video.find({ title: new RegExp(query, 'i') }); 
             }
-            res.status(200).json(videos);
+
+            // Transforma los videos al formato deseado
+            const formattedVideos = videos.map(video => {
+                return {
+                    _id: video._id,
+                    title: video.title,
+                    description: video.description,
+                    url: video.url,
+                    likes: video.likes,
+                    __v: video.__v
+                };
+            });
+            // Guarda los videos en un archivo JSON
+            fs.writeFileSync('app/data/videos.json', JSON.stringify(formattedVideos, null, 4)); 
+
+            res.status(200).json(formattedVideos);
         } catch (e) {
             console.error(e);
             res.status(400).send("ERROR: " + e.message);

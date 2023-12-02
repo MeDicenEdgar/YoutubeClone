@@ -1,12 +1,13 @@
 "use strict";
 
 function generateUID() {
-    return 12
-}    
-
-function generateVideoID(){
-    return 21
+    return Math.floor(100000 + Math.random() * 900000);
 }
+
+function generateVideoID() {
+    return Math.floor(100000 + Math.random() * 900000);
+}
+
 module.exports = {
     generateUID,
     generateVideoID

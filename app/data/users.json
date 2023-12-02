@@ -1,13 +1,206 @@
-{
-    "total-users" : 1,
-    "users" : [
+[
     {
-        "ID": 1,
         "email": "mail@yahoo.com",
-        "password" : "OdioLosPatos",
-        "avatar": "path_to_avatar3.png",
-        "admin": 0,
-        "videoIDs": [1,2,3]
+        "password": "OdioLosPatos"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochi@gmail.com",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "yochabel.martinez@iteso.mx",
+        "password": "yochi123"
+    },
+    {
+        "email": "q",
+        "password": "2"
+    },
+    {
+        "email": "a",
+        "password": "a"
+    },
+    {
+        "email": "a",
+        "password": "a1"
     }
 ]
-}

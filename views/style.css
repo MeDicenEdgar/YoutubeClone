@@ -194,6 +194,7 @@ body {
 }
 .like-button{
     color: gray;
+    border: 0px;
 }
 .like-counter{
     font-size: 9px;
@@ -206,4 +207,15 @@ body {
 }
 .icon-upload{
     margin-right: 30px;
+}
+.video-image{
+    width: 300px;
+}
+.upload-control{
+    width: 260px;
+}
+.username{
+    border: 0px;
+    color: blue;
+    background-color: white;
 }

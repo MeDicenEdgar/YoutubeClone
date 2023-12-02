@@ -1,14 +1,322 @@
-{ 
-    "total-videos" : 1,
-    "videos": [
-      {
-        "id": 1,
-        "title": "Video 1",
-        "description": "Descripción del Video 1",
-        "url": "path_to_video_1.mp4",
-        "likes": 120,
-        "uploadid": 1,
-        "approved": 1
-      }
-    ]
-  }
+[
+    {
+        "_id": "65699153c00808d06e79cf88",
+        "title": "Video1",
+        "description": "This is video 1",
+        "url": "https://youtu.be/tBA7N40rpnE?si=4lxZD9Ewgjoe4u26",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "656991b725f1ccb79bfd30a4",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "65699461d11bb820b1854c06",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "6569961dc440376a2e1f59f4",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "6569998f6706d486f26cf0c0",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "656999ecde560f21f7c0c72f",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "65699aad0a869d5a26758ee0",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "65699b4977c366f0cc49824f",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "65699cf5041d48442076a7b9",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "65699da3cc5e853832d0e9f5",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "65699eb1d395011ce7d8d4a8",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "65699eed55c6da2251434a17",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "65699f72f4adbb616847f79b",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "6569a0bf5000cfcaa788ded0",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "6569a1400a0e5ee744106195",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "6569a29746bfef184c4585e8",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "6569a3b646bfef184c4585ed",
+        "title": "Video2",
+        "description": "This is video 2",
+        "url": "https://youtu.be/tBA7N40rpnE?si=4lxZD9Ewgjoe4u26",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "6569a3be46bfef184c4585ef",
+        "title": "Video3",
+        "description": "This is video 3",
+        "url": "https://youtu.be/tBA7N40rpnE?si=4lxZD9Ewgjoe4u26",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "6569a3cb46bfef184c4585f1",
+        "title": "Video4",
+        "description": "This is video 4",
+        "url": "https://youtu.be/tBA7N40rpnE?si=4lxZD9Ewgjoe4u26",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "6569a4b502f946f644d14fba",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "6569a4f5456a7b1d61a80070",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "6569a5a1147d1116b090f598",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "6569a6706bb7e1b41e18620a",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "6569a7e9a9869021ca2d9bcd",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "6569a90892aac1e562793dec",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "6569a929499edda8b12f0f5a",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "6569aa3e08e8f833fa6370a9",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "6569ab16a245693d5167ed6f",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "6569ab7d2c0ba3cfb6becfc4",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "6569ad87a9ad39482e1028a9",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "6569ae2f743f1326b017286e",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "6569ae48f2fa3c7fe4c633bf",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "6569ae6392df9460dc26381e",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "6569ae8d681c06579083d118",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "6569aea73f894bf8f101bcb3",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "6569af1df35363252eb1f960",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "6569dd28ef2e4094527c260a",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "6569f456e01e934a24fb5b50",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "6569f553b36e9a36b06a813b",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    },
+    {
+        "_id": "6569f7937e0de1934fe86fc9",
+        "title": "video1",
+        "description": "This is video1",
+        "url": "www.video1.com",
+        "likes": 0,
+        "__v": 0
+    }
+]
