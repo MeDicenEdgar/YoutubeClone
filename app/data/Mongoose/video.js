@@ -2,11 +2,6 @@
 
 const mongoose = require('mongoose');
 
-let MongoDB = 'mongodb://127.0.0.1:27017/YoutubeClone'
-//let option = { useNewUrlParser: true, useUnifiedTopology: true};
-
-mongoose.connect(MongoDB);
-
 //Esquema de usuario
 let videoSchema = mongoose.Schema({
     title:{

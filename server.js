@@ -4,13 +4,16 @@ const fs = require('fs');
 const cors = require('cors');
 const express = require('express');
 const mongoose = require('mongoose');
+const mongoDBUri = process.env.MONGODB_URI || 'mongodb://localhost:27017';
+mongoose.connect(mongoDBUri)
+    .then(() => console.log("Conexión a MongoDB establecida"))
+    .catch(err => console.error("No se pudo conectar a MongoDB", err));
 const app = express();
-const port = 3000;
+//const port = 3000;
+const port = process.env.PORT || 3000;
 const User = require('./app/data/Mongoose/user');
 const Video = require('./app/data/Mongoose/video');
 const dataHandler = require('./app/controllers/data_handler');
-
-mongoose.connect('mongodb://127.0.0.1:27017/YoutubeClone');
 
 app.use(cors());
 app.use(express.json());
@@ -288,10 +291,7 @@ app.post('/uploadVideo', async (req, res) => {
         console.error(e);
         res.status(500).send(`Error creating video: ${e.message}`);
     }
-});
-
-
-    
+}); 
 
 app.listen(port, () => {
     console.log(`YoutubeClone app listening on port ${port}!`);
