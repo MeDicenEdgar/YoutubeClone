@@ -161,15 +161,15 @@ uploadButton.addEventListener('click', function() {
         return;
     }
 
-    const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
-    
-    if (currentUser && currentUser._uid) {
-        const userId = currentUser._uid;
-        const newVideo = {
-            title,
-            description,
-            url,
-            userId
+    if (sessionStorage.getItem('currentUser')) {
+        let currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
+        console.log(currentUser);
+        const userId = currentUser.email;
+        const newVideo={
+            "title" : title,
+            "description" : description,
+            "url" : url,
+            "userId":userId
         };
 
         fetch('http://localhost:3000/uploadVideo', {

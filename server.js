@@ -267,7 +267,7 @@ app.post('/uploadVideo', async (req, res) => {
         // Crear una instancia del modelo Video y guardar
         let video = new Video(newVideoData);
         let savedVideo = await video.save();
-        res.status(201).send(`Video created: ${savedVideo.title}`);
+        res.status(201).json({ message: `Video created: ${savedVideo.title}` });
     } catch (e) {
         console.error(e);
         res.status(500).send(`Error creating video: ${e.message}`);
