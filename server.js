@@ -28,7 +28,9 @@ app.use('/', router);
 /*
 const adminVideoRouter = require('../routes/admin_video');
 app.use('/admin', adminVideoRouter);*/
-
+app.get('/', (req, res) => {
+    res.send('Bienvenido a mi aplicación!');
+});
 app.get('/video', async (req, res) => {
     try {
         const videos = await Video.find({}); // Encuentra todos los videos
