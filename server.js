@@ -36,22 +36,38 @@ app.get('/video', async (req, res) => {
 });
 app.get('/user', async (req, res) => {
     try {
-        const users = await User.find({}); // Encuentra todos los usuarios
+        const users = await User.find({}); 
+        const data = JSON.stringify(videos, null, 2);
+        fs.writeFile('./app/data/users.json', data, (err) => {
+            if (err) {
+                throw err;
+            }
+            console.log('Los usuarios han sido guardados en videos.json');
+        });
         res.status(200).json(users);
     } catch (error) {
         res.status(500).send('Error al obtener los usuarios: ' + error.message);
     }
 });
 
-
 app.get('/getvideos', async (req, res) => {
     try {
         const videos = await Video.find({});
-        res.json(videos);
+        const data = JSON.stringify(videos, null, 2);
+
+        fs.writeFile('./app/data/videos.json', data, (err) => {
+            if (err) {
+                throw err;
+            }
+            console.log('Los videos han sido guardados en videos.json');
+        });
+        res.status(200).json(videos);
     } catch (error) {
-        res.status(500).send(error);
+        res.status(500).send('Error al obtener los videos: ' + error.message);
     }
 });
+
+
 app.post('/login', (req, res) => {
     const { email, password } = req.body;
 
@@ -83,7 +99,7 @@ app.post('/registerUser', async (req, res) => {
         await newUser.save(); // Asumiendo que esto es una operación de base de datos
 
         // Leer el archivo y agregar el nuevo usuario
-        fs.readFile('../data/users.json', (err, data) => {
+        fs.readFile('./app/data/users.json', (err, data) => {
             if (err) {
                 res.status(500).send('Error al leer el archivo: ' + err.message);
                 return;

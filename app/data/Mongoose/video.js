@@ -36,7 +36,7 @@ let videoSchema = mongoose.Schema({
 });
 
 let Video = mongoose.model('video',videoSchema);
-let newVideo = {
+/*let newVideo = {
     title: "video1",
     description: "This is video1",
     url: "www.video1.com",
@@ -46,6 +46,6 @@ let video = Video(newVideo);
 
 video.save()
     .then(doc => console.log(doc))
-    .catch(err => console.log(err));
+    .catch(err => console.log(err));*/
 
 module.exports = Video;
