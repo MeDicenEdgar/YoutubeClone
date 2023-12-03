@@ -4,7 +4,7 @@ const fs = require('fs');
 const cors = require('cors');
 const express = require('express');
 const mongoose = require('mongoose');
-const mongoDBUri = process.env.MONGODB_URI || 'mongodb://localhost:27017';
+const mongoDBUri = process.env.MONGODB_URI;
 mongoose.connect(mongoDBUri)
     .then(() => console.log("Conexión a MongoDB establecida"))
     .catch(err => console.error("No se pudo conectar a MongoDB", err));
