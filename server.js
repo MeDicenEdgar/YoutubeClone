@@ -135,8 +135,6 @@ app.post('/registerVideo', async (req, res) => {
     }
 });
 
-
-
 app.post('/adduser', (req, res) => {
     const newUser = new User({
         email: req.body.email,
@@ -232,12 +230,12 @@ app.put('/admin/video/:id', async (req, res) => {
         res.status(500).send(`Error updating video: ${error.message}`);
     }
 });
-app.delete('/admin/user/:id', async (req, res) => {
+app.delete('/user/:id', async (req, res) => {
     const id = req.params.id;
         
     try {
         // Encuentra el usuario por ID y elimínalo
-        const deletedUser = await User.findOneAndDelete(id);
+        const deletedUser = await User.findOneAndDelete({ _id: id });
     
         // Si no se encuentra el usuario, envía un 404
         if (!deletedUser) {
@@ -252,24 +250,25 @@ app.delete('/admin/user/:id', async (req, res) => {
         res.status(500).send(`Error deleting user: ${error.message}`);
     }
 });
-app.delete('/video/:id', async (req, res) => {
+app.delete('/user/:id', async (req, res) => {
     const id = req.params.id;
-        
+
+    // Verifica si el ID es un ObjectId válido
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+        return res.status(400).send('Invalid user ID');
+    }
+
     try {
-        // Encuentra el video por su ObjectId válido y elimínalo
-        const deletedVideo = await Video.findOneAndDelete({ _id: id });
-    
-        // Si no se encuentra el video, envía un 404
-        if (!deletedVideo) {
-            return res.status(404).send('Video not found');
+        const deletedUser = await User.findOneAndDelete({ _id: id });
+
+        if (!deletedUser) {
+            return res.status(404).send('User not found');
         }
-    
-        // Envía la respuesta con el video eliminado
-        res.status(200).send('Video deleted');
+
+        res.status(200).send('User deleted');
     } catch (error) {
-        // Manejar cualquier error durante la eliminación
-        console.error('Error deleting video:', error);
-        res.status(500).send(`Error deleting video: ${error.message}`);
+        console.error('Error deleting user:', error);
+        res.status(500).send(`Error deleting user: ${error.message}`);
     }
 });
 app.post('/uploadVideo', async (req, res) => {
